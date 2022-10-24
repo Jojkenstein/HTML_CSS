@@ -1,0 +1,318 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 1024px;
+    text-align: center;
+    margin: 25px;
+    border-style: solid;
+}
+
+a.one:link {
+    color: #000000;
+    text-decoration: none;
+}
+
+a.one:visited {
+    color: #0000ff;
+    text-decoration: none;
+}
+
+a.one:hover {
+    text-decoration: underline;
+}
+
+p.thick {
+    font-weight: bold;
+}
+
+li.thick {
+    font-weight: bold;
+}
+
+#header1 {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+#header2 {
+    text-decoration: none;
+    font-weight: bold;
+    font-style: italic;
+    color: black;
+}
+
+#login {
+    text-transform: uppercase;
+}
+
+#red {
+    color: red;
+}
+
+#green {
+    color: green;
+}
+
+#blue {
+    color: blue;
+}
+
+
+header {
+    background-color: rgb(234, 112, 13);
+    border-style: none;
+    height: 75px;
+}
+
+/* HEADER ONE-ROW-GRID */
+.grid-header-container {
+    display: grid;
+    border-style: none;
+    grid-template-columns: 14fr 10fr 10fr 10fr 15fr 10fr;
+    grid-template-areas: 'a1 a2 a2 a2 . a6';
+    border-top: 0px;
+    border-bottom: 0px;
+}
+
+.grid-item {
+    border-style: none;
+    border-top: 0px;
+    border-bottom: 0px;
+    height: 75px;
+    /* MUST BE SET FOR BOTH PAGES TO LOOK CORRECT*/
+}
+
+.grid-item-1 {
+    grid-area: a1;
+    background-color: rgb(234, 112, 13);
+    border-right: solid;
+}
+
+.grid-item-2 {
+    display: grid;
+    grid-area: a2;
+    background-color: rgb(47, 134, 153);
+    border-right: solid;
+}
+
+.grid-item-5 {
+    /* UNFORTUNATELY NOT USED */
+    grid-area: a5;
+    background-color: rgb(234, 112, 13);
+}
+
+.grid-item-6 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: a6;
+    background-color: rgb(113, 146, 190);
+    text-decoration: none;
+    border-left: solid;
+}
+
+/* Special "grid-inside-grid" for the menu items that according to task MUST be an unordered list */
+.grid-list {
+    display: grid;
+    list-style-type: none;
+    /* Removes the dot in front of the UL Menu Item*/
+    grid-template-areas: 'a2 a3 a4';
+    margin: 0px;
+    padding: 0px;
+    height: auto;
+    text-decoration: none;
+}
+
+.grid-list-item {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    border-style: none;
+    height: auto;
+}
+
+.grid-list-item-1 {
+    grid-area: a2;
+}
+
+.grid-list-item-2 {
+    grid-area: a3;
+    border-left: solid;
+    height: 75px
+        /* THIS MUST BE SET THE SAME AS TOP HEADER SETTING*/
+}
+
+.grid-list-item-3 {
+    grid-area: a4;
+    border-left: solid;
+}
+
+
+/* MAIN GRID INDEX (minus header) */
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        'mainheader mainheader aside'
+        'subtext subtext aside'
+        'art1 art2 aside'
+        'footer footer footer';
+    grid-gap: 0px;
+}
+
+.mainheader {
+    background-color: rgb(254, 217, 102);
+    /* background-color: rgb(221, 226, 204); */
+    border-style: solid;
+    border-right: none;
+    border-bottom: none;
+    border-left: none;
+    text-align: left;
+    padding-left: 10px;
+}
+
+.subtext {
+    background-color: rgb(254, 217, 102);
+    /* background-color: rgb(221, 226, 204); */
+    border-style: solid;
+    border-right: none;
+    border-bottom: none;
+    border-left: none;
+    padding-left: 5px;
+    padding-right: 5px;
+
+}
+
+.art1 {
+    background-color: rgb(254, 217, 102);
+    /* background-color: rgb(221, 226, 204); */
+    border-style: solid;
+    border-right: none;
+    border-bottom: none;
+    border-left: none;
+}
+
+.art2 {
+    background-color: rgb(254, 217, 102);
+    /* background-color: rgb(221, 226, 204); */
+    border-style: solid;
+    border-right: none;
+    border-bottom: none;
+}
+
+aside {
+    background-color: rgb(196, 213, 159);
+    border-style: solid;
+    height: 500px;
+    padding: 10px;
+    border-right: none;
+    border-bottom: none;
+    text-align: left;
+}
+
+footer {
+    /*this will work for both pages*/
+    background-color: rgb(112, 48, 160);
+    border-style: solid;
+    padding: 10px;
+    border-right: none;
+    border-bottom: none;
+    border-left: none;
+    height: 35px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.mainheader {
+    grid-area: mainheader;
+}
+
+.subtext {
+    grid-area: subtext;
+}
+
+.aside {
+    grid-area: aside;
+}
+
+.art1 {
+    grid-area: art1;
+}
+
+.art2 {
+    grid-area: art2;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+/* MAIN GRID LOGIN (minus header) */
+.grid-login {
+    background-color: rgb(254, 217, 102);
+    display: grid;
+    grid-template-areas:
+        '. . . . .'
+        '. H . . .'
+        '. F F F .'
+        '. F F F .'
+        '. F F F .'
+        '. . . . .';
+    grid-gap: 0px;
+    height: 320px;
+    border-top: solid;
+}
+
+/*Login Header*/
+.logH {
+    grid-area: H;
+    background-color: rgb(221, 226, 204);
+    border-style: solid;
+    text-align: left;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin: 2px;
+    height: 50px;
+}
+
+/*Form*/
+.logF {
+    grid-area: F;
+    background-color: rgb(221, 226, 204);
+    border-style: solid;
+    text-align: left;
+    padding-left: 10px;
+    display: grid;
+    align-items: center;
+    justify-content: left;
+    margin: 2px;
+    height: 150px;
+    border-radius: 10px;
+}
+
+input[type=text],
+[type=password] {
+    width: 50%;
+    padding: 16px 50px;
+    margin: 4px 0;
+    box-sizing: border-box;
+    background-color: rgb(254, 217, 102);
+    border-radius: 4px;
+    border-style: inset;
+    border: solid;
+}
+
+input[type=button],
+input[type=submit],
+input[type=reset] {
+    background-color: rgb(47, 134, 153);
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}

@@ -1,34 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
-        <h1>Login</h1>
-        <nav>
-            <ul>
-                <li><a href="url">link 1</a></li>
-                <li><a href="url">link 2</a></li>
-                <li><a href="url">link 3</a></li>
-            </ul>
-            <li><a href="index.html">HTML & CSS</a></li>
-        </nav>
+        <div class="grid-header-container">
+            <div class="grid-item grid-item-1">
+                <h1 class="title">Site name</h1>
+            </div>
+            <div class="grid-item grid-item-2">
+                <nav>
+                    <ul class="grid-list">
+                        <div class="grid-list-item grid-list-item-1">
+                            <li><a id="header1" href="url">Menu Item 1</a></li>
+                        </div>
+                        <div class="grid-list-item grid-list-item-2">
+                            <li><a id="header1" href="url">Menu Item 2</a></li>
+                        </div>
+                        <div class="grid-list-item grid-list-item-3">
+                            <li><a id="header1" href="url">Menu Item 3</a></li>
+                        </div>
+                    </ul>
+                </nav>
+            </div>
+            <div class="grid-item grid-item-6"><a id="header2" href="index.html">Index</a></div>
+        </div>
     </header>
-    <main>
-        <h3>User login</h3>
-        <form action="" method="post">
-            <input type="text" name="" id="">
-            <input type="password" name="" id="">
-            <input type="reset" value="reset">
-            <input type="submit" value="Sign in">
-        </form>
-    </main>
+    <div class="grid-login">
+        <div class="logH" id="login">
+            <h3>User login</h3>
+        </div>
+        <div class="logF">
+            <form action="" method="post">
+                <label for="name">User Id</label>
+                <input type="text" name="name" id="name" placeholder="name">
+                <input type="reset" value="Reset"><br>
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="********">
+                <input type="submit" value="Sign in">
+            </form>
+        </div>
+
+    </div>
     <footer>
         <span>&#169;Jey Kay</span>
     </footer>
+
 </body>
+
 </html>

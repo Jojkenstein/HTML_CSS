@@ -1,72 +1,116 @@
 <!DOCTYPE html>
 <html lang="eng">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML & CSS</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
-        <h1>HTML & CSS</h1>
-        <nav>
-            <ul>
-                <li><a href="url">link 1</a></li>
-                <li><a href="url">link 2</a></li>
-                <li><a href="url">link 3</a></li>
-            </ul>
-            <li><a href="login.html">Login</a></li>
-        </nav>
+        <div class="grid-header-container">
+            <div class="grid-item grid-item-1">
+                <h1 class="title">Site name</h1>
+            </div>
+            <div class="grid-item grid-item-2">
+                <nav>
+                    <ul class="grid-list">
+                        <div class="grid-list-item grid-list-item-1">
+                            <li class="thick">
+                                <a id="header1" href="url">Menu Item 1</a>
+                            </li>
+                        </div>
+                        <div class="grid-list-item grid-list-item-2">
+                            <li class="thick">
+                                <a id="header1" href="url">Menu Item 2</a>
+                            </li>
+                        </div>
+                        <div class="grid-list-item grid-list-item-3">
+                            <li class="thick">
+                                <a id="header1" href="url">Menu Item 3</a>
+                            </li>
+                        </div>
+                    </ul>
+                </nav>
+            </div>
+            <div class="grid-item grid-item-6">
+                <a id="header2" href="login.html">Login</a>
+            </div>
+        </div>
     </header>
-    <main>
-        <h2>Main Content</h2>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur 
-            impedit voluptatem iste excepturi quasi, sequi suscipit explicabo amet ut,
-             nisi, nihil iusto ipsa! Aliquam ut, reprehenderit ipsa unde dolores quis!
-        </p>
-        <article>
-            <h3>Article A headline</h3>
-            <p>Paragraph A text 1</p>
-            <p>Paragraph A text 2</p>
-        </article>
-        <article>
-            <h3>Article B headline</h3>
-            <p>Paragraph B text 1</p>
-            <p>Paragraph B text 2</p>
-            <img src="nate-rayfield-_WR6tUIAJe8-unsplash.jpg" alt="The Fountain-like" width=150>
-        </article>
-    </main>
-    <aside>
-        <h3>Aside element headline</h3>
-        <ul>
-            <li>
-                <h4>Nation 1</h4>
-                <ol>
-                    <li>City A: 10M</li>
-                    <li>City B: 5M</li>
-                    <li>City C: 2M</li>
-                </ol>               
-            </li>
-            <li>
-                <h4>Nation 2</h4>
-                <ol>
-                    <li>City A: 12M</li>
-                    <li>City B: 8M</li>
-                    <li>City C: 7M</li>
-                </ol>               
-            </li>
-            <li>
-                <h4>Nation 1</h4>
-                <ol>
-                    <li>City A: 7M</li>
-                    <li>City B: 3M</li>
-                    <li>City C: 1M</li>
-                </ol>               
-            </li>
-        </ul>
-    </aside>
-    <footer>
-        <span>&#169;Jey Kay</span>
-    </footer>
+    <div class="grid-container">
+        <div class="mainheader">
+            <h2>Main Content</h2>
+        </div>
+        <!--"Main header"-->
+        <div class="subtext">
+            <p>
+                <!--"Sub text"-->
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. At illum voluptas enim pariatur,
+                quaerat
+                corporis cupiditate suscipit quos velit dolorem eum mollitia magni libero ullam odio ratione
+                eveniet, placeat repellendus?
+            </p>
+        </div>
+        <div class="art1">
+            <article>
+                <!--"Article 1"-->
+                <h3>Article A headline</h3>
+                <p>Paragraph A text 1</p>
+                <p class="thick" id="blue">Paragraph A text 2</p>
+            </article>
+        </div>
+        <div class="art2">
+            <article>
+                <!--"Article 2"-->
+                <h3>Article B headline</h3>
+                <p>Paragraph B text 1</p>
+                <p>Paragraph B text 2</p>
+                <img src="nate-rayfield-_WR6tUIAJe8-unsplash.jpg" alt="The Fountain-like" width=150>
+            </article>
+        </div>
+        <div class="aside">
+            <aside>
+                <!--"Side content"-->
+                <h3>Aside element headline</h3>
+                <ul>
+                    <li id="red">
+                        <h4>Nation 1</h4>
+                        <ol>
+                            <li>City A: 10M</li>
+                            <li>City B: 5M</li>
+                            <li>City C: 2M</li>
+                        </ol>
+                    </li>
+                    <li id="green">
+                        <h4>Nation 2</h4>
+                        <ol>
+                            <li>City A: 12M</li>
+                            <li>City B: 8M</li>
+                            <li>City C: 7M</li>
+                        </ol>
+                    </li>
+                    <li id="red">
+                        <h4>Nation 1</h4>
+                        <ol>
+                            <li>City A: 7M</li>
+                            <li>City B: 3M</li>
+                            <li>City C: 1M</li>
+                        </ol>
+                    </li>
+                </ul>
+            </aside>
+        </div>
+        <div class="footer">
+            <footer>
+                <span>&#169;Jey Kay</span>
+            </footer>
+        </div>
+    </div>
+    </div>
 </body>
+
 </html>
